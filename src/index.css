@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Oxygen&family=Bungee&family=Dancing+Script&display=swap");
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #141420;
+  min-height: 100%;
+}
+
+.App {
+  font-family: "Oxygen", sans-serif;
+  text-align: center;
+}
+
+.activeLinkGreen {
+  color: rgb(12, 243, 12);
+}
+
+.activeLinkRed {
+  color: red;
+}
+
+.activeLinkYellow {
+  color: rgb(236, 214, 11);
+}
