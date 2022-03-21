@@ -1,5 +1,5 @@
 {
-  "name": "movieninjas",
+  "name": "vishaltiwari",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,12 +18,12 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "react-scripts start",
     "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3300",
+  "proxy": "https://backendfynd.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },

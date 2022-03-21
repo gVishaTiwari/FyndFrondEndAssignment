@@ -96,7 +96,7 @@ const Item = ({
                 <Genres genres={info.genre}/>
             <div className="card-action" style={{ display: "flex",justifyContent: "space-between"}}>
               <div
-              disabled={userDetails.profile.toLowerCase() !=='admin'}
+              disabled={userDetails && userDetails.profile.toLowerCase() !=='admin'}
                 className="btn waves-effect waves-light blue darken-1"
                 style={{ textAlign: "left" }}
                 onClick={() => handleClick(info.id, isFavorite)}
@@ -104,7 +104,7 @@ const Item = ({
                 <i className="material-icons">edit</i>{" "}
               </div>
               <div
-              disabled={userDetails.profile.toLowerCase() !=='admin'}
+              disabled={userDetails&&userDetails.profile.toLowerCase() !=='admin'}
                 className="btn waves-effect waves-light red darken-1"
                 style={{ textAlign: "left" }}
                 onClick={() => deleteMovie(info)}
