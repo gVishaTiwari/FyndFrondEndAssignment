@@ -54,7 +54,7 @@ const Item = ({
       console.log("Delete Done")
 
       axios
-        .get(deletemovie)
+        .post(deletemovie)
         .then((res) => {
           updateTrending(res.data.movies);
         })
