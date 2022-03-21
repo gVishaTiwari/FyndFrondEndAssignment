@@ -7,7 +7,7 @@ const initialState = {};
 const middleware = [thunk];
 
 export const store = createStore(rootReducer, initialState, compose(
-    applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+    applyMiddleware(...middleware)));
 // export const store = createStore(rootReducer, applyMiddleware(thunk));
 // if(process.env.NODE_ENV === 'production') {
 //     store = createStore(rootReducer, initialState, compose(
