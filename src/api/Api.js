@@ -9,6 +9,6 @@ export const rootURL = isLive? 'https://backendfynd.herokuapp.com':'http://local
 export const queryURL =`${rootURL}/movies/searchMovie`;
 export const top_rated=`${rootURL}/movies/allMovies`;
 export const createSession=`${rootURL}/user/createSession`;
-export const deleteMovie = `${rootURL}/movies/deleteMovie`;
+export const deletemovie = `${rootURL}/movies/deleteMovie`;
 export const loggedUsed=`${rootURL}/user/loggedUsed`;
 export const usercreate=`${rootURL}/user/create`;

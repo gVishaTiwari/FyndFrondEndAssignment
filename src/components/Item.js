@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { deleteMovie } from "../api/Api";
+import { deletemovie } from "../api/Api";
 import {
   updateFavorites,
   updateTrending,
@@ -49,12 +49,12 @@ const Item = ({
   const deleteMovie=(movie) => {
     let body={movie_id:movie.id}
     axios
-    .post(deleteMovie,body)
+    .post(deletemovie,body)
     .then((res) => {
       console.log("Delete Done")
 
       axios
-        .get(deleteMovie)
+        .get(deletemovie)
         .then((res) => {
           updateTrending(res.data.movies);
         })
