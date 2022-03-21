@@ -5,7 +5,7 @@ import Item from "./Item";
 import { updateTrending } from "../redux/movie/movieActions";
 import Preloader from "./Preloader";
 import NoMovieGeneric from "./NoMovieGeneric";
-
+import { top_rated } from "../api/Api";
 const Trending = ({ movies, updateTrending }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -13,7 +13,7 @@ const Trending = ({ movies, updateTrending }) => {
     if (movies.length === 0) {
       setLoading(true);
       axios
-        .get('/movies/allMovies')
+        .get(top_rated)
         .then((res) => {
           updateTrending(res.data.movies);
           setLoading(false);

@@ -13,12 +13,10 @@ const About = () => {
   };
 
   const githubClick = () => {
-    setButtonLink("https://github.com/JanaSabuj/movieninjas");
+    setButtonLink("https://github.com/gVishaTiwari");
   };
 
-  const websiteClick = () => {
-    setButtonLink("https://janasabuj.github.io");
-  };
+ 
 
   return (
     <>
@@ -52,13 +50,7 @@ const About = () => {
                   <i className="small material-icons left">code</i>
                 </button>
 
-                <button
-                  className="btn waves-effect waves-light brown darken-1"
-                  onClick={websiteClick}
-                >
-                  Website
-                  <i className="small material-icons right">fingerprint</i>
-                </button>
+               
               </form>
             </div>
           </div>

@@ -2,6 +2,9 @@ import axios from 'axios';
 import { returnErrors } from '../error/errorAction';
 import { UPDATE_FAIL, UPDATE_SUCCESS, USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_FAIL, LOGIN_SUCCESS,
      LOGOUT_SUCCESS, REGISTER_FAIL, REGISTER_SUCCESS, EXPIRE_EXTEND } from '../types';
+import { loggedUsed } from '../../api/Api';
+import { createSession } from '../../api/Api';
+import { usercreate } from '../../api/Api';
 
 
 export const loadUser = () => (dispatch, getState) => {
@@ -21,7 +24,7 @@ export const loadUser = () => (dispatch, getState) => {
     if (token) {
         config.headers['x-auth-token'] = token;
 
-        axios.get("/user/loggedUsed", config)
+        axios.get(loggedUsed, config)
             .then(res => dispatch({
                 type: USER_LOADED,
                 payload: res.data
@@ -56,7 +59,7 @@ export const login = ({ email, password }) => dispatch => {
     const body = JSON.stringify({ Email:email, password });
     console.log(body);
 
-    axios.post("/user/createSession", body, config)
+    axios.post(createSession, body, config)
         .then(res => dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -82,7 +85,7 @@ export const register = ({ name, email, password, profile }) => dispatch => {
 
     const body = JSON.stringify({ name, Email: email, password, profile });
 
-    axios.post("/user/create", body, config)
+    axios.post(usercreate, body, config)
         .then(res => dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
